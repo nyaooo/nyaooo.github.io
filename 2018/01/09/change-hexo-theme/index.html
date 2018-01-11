@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="hexo-theme," />
+  <meta name="keywords" content="css float," />
 
 
 
@@ -75,22 +75,33 @@
 
 
 
-<meta name="description" content="用github+hexo搭起来的博客已经好久了，搞完域名绑定就开始偷懒了……现在先从写一篇简单的更换主题，来治疗重度拖延症。 挑个好看的主题全凭个人喜好，在网上能找到很多好看的主体供你下载。 自己找的时候发现的两个的地方：知乎话题：有哪些好看的 Hexo 主题？ hexo官方：Themes 下载用git bash，进入到博客的本地目录中,1$ cd 你的博客目录路径  然后使用clone的方法将想">
-<meta name="keywords" content="hexo-theme">
+<meta name="description" content="关于css浮动的理解什么是“浮动”概念浮动是指的是css的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。 以下是MDN web docs中关于浮动的描述：  float CSS属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常">
+<meta name="keywords" content="css float">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客主题更换（github + hexo）">
-<meta property="og:url" content="http://yoursite.com/2018/01/09/change-hexo-theme/index.html">
+<meta property="og:title" content="关于css浮动的理解">
+<meta property="og:url" content="http://yoursite.com/2018/01/11/css-float/index.html">
 <meta property="og:site_name" content="Nyaooo">
-<meta property="og:description" content="用github+hexo搭起来的博客已经好久了，搞完域名绑定就开始偷懒了……现在先从写一篇简单的更换主题，来治疗重度拖延症。 挑个好看的主题全凭个人喜好，在网上能找到很多好看的主体供你下载。 自己找的时候发现的两个的地方：知乎话题：有哪些好看的 Hexo 主题？ hexo官方：Themes 下载用git bash，进入到博客的本地目录中,1$ cd 你的博客目录路径  然后使用clone的方法将想">
+<meta property="og:description" content="关于css浮动的理解什么是“浮动”概念浮动是指的是css的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。 以下是MDN web docs中关于浮动的描述：  float CSS属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnana7yz7zj20hu06c74w.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnan7li11wj20e405774h.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnao07w9fpj20kt02at8w.jpg">
-<meta property="og:updated_time" content="2018-01-09T13:15:50.706Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsqr703wj20eg0763zi.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsrzk3klj20eh05at9r.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtw0afu2j20ek06cwei.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtzxf9mlj20ed04ymy4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbuf3ya66j20e903kwel.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbukbfcn8j209c03u3ye.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbulajru6j209603mjr9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoda5fusj20ae09rta8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoe40dpwj20a409i0ub.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncooemh1dj20a80agq4h.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpk34azbj20aa0azabq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpjlyl3uj20a30byabp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncq91opqej20xd0j2whz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncqdxt1o4j20zx0catao.jpg">
+<meta property="og:updated_time" content="2018-01-11T08:40:27.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客主题更换（github + hexo）">
-<meta name="twitter:description" content="用github+hexo搭起来的博客已经好久了，搞完域名绑定就开始偷懒了……现在先从写一篇简单的更换主题，来治疗重度拖延症。 挑个好看的主题全凭个人喜好，在网上能找到很多好看的主体供你下载。 自己找的时候发现的两个的地方：知乎话题：有哪些好看的 Hexo 主题？ hexo官方：Themes 下载用git bash，进入到博客的本地目录中,1$ cd 你的博客目录路径  然后使用clone的方法将想">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnana7yz7zj20hu06c74w.jpg">
+<meta name="twitter:title" content="关于css浮动的理解">
+<meta name="twitter:description" content="关于css浮动的理解什么是“浮动”概念浮动是指的是css的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。 以下是MDN web docs中关于浮动的描述：  float CSS属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsqr703wj20eg0763zi.jpg">
 
 
 
@@ -122,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/09/change-hexo-theme/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/11/css-float/"/>
 
 
 
@@ -365,6 +376,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/11/css-float/" rel="prev" title="关于css浮动的理解">
+                关于css浮动的理解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -441,7 +468,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -454,7 +481,7 @@
                 
                 <div class="site-state-item site-state-tags">
                   
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
