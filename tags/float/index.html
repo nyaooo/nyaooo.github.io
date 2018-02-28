@@ -75,33 +75,25 @@
 
 
 
-<meta name="description" content="关于CSS浮动的理解什么是“浮动”概念浮动是指的是CSS的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。">
+<meta name="description" content="消除CSS浮动带来的影响当我们在进行页面布局的过程里，使用了float属性后。由于浮动元素的特性，就会给布局带来影响。这里就简单总结以下，如何消除浮动所带来的影响。">
 <meta name="keywords" content="css,float">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于css浮动的理解">
-<meta property="og:url" content="http://yoursite.com/2018/01/11/css-float/index.html">
+<meta property="og:title" content="消除CSS浮动带来的影响">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/css-float-2/index.html">
 <meta property="og:site_name" content="Nyaooo">
-<meta property="og:description" content="关于CSS浮动的理解什么是“浮动”概念浮动是指的是CSS的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。">
+<meta property="og:description" content="消除CSS浮动带来的影响当我们在进行页面布局的过程里，使用了float属性后。由于浮动元素的特性，就会给布局带来影响。这里就简单总结以下，如何消除浮动所带来的影响。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsqr703wj20eg0763zi.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsrzk3klj20eh05at9r.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtw0afu2j20ek06cwei.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtzxf9mlj20ed04ymy4.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbuf3ya66j20e903kwel.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbukbfcn8j209c03u3ye.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbulajru6j209603mjr9.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoda5fusj20ae09rta8.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoe40dpwj20a409i0ub.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncooemh1dj20a80agq4h.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpk34azbj20aa0azabq.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpjlyl3uj20a30byabp.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncq91opqej20xd0j2whz.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fncqdxt1o4j20zx0catao.jpg">
-<meta property="og:updated_time" content="2018-02-28T09:14:38.509Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fowb6bg2g3j20er097jrn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fowbeuv0i7j20ml094wet.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1foweq15i3oj20my090gm1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fowibb0k43j20el06ajrl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fowifg72ohj20ee091jrm.jpg">
+<meta property="og:updated_time" content="2018-02-28T14:31:38.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于css浮动的理解">
-<meta name="twitter:description" content="关于CSS浮动的理解什么是“浮动”概念浮动是指的是CSS的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsqr703wj20eg0763zi.jpg">
+<meta name="twitter:title" content="消除CSS浮动带来的影响">
+<meta name="twitter:description" content="消除CSS浮动带来的影响当我们在进行页面布局的过程里，使用了float属性后。由于浮动元素的特性，就会给布局带来影响。这里就简单总结以下，如何消除浮动所带来的影响。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtw0afu2j20ek06cwei.jpg">
 
 
 
@@ -133,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/11/css-float/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/28/css-float-2/"/>
 
 
 
