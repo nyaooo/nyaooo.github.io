@@ -139,7 +139,7 @@
 
 
 
-  <title>关于css浮动的理解 | Nyaooo</title>
+  <title>消除CSS浮动带来的影响 | Nyaooo</title>
   
 
 
@@ -256,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/css-float/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/css-float-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nyaooo">
@@ -273,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于css浮动的理解</h1>
+          <h1 class="post-title" itemprop="name headline">消除CSS浮动带来的影响</h1>
         
 
         <div class="post-meta">
@@ -285,7 +285,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-11T16:33:28+08:00">2018-01-11</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T17:12:38+08:00">2018-02-28</time>
             
 
             
@@ -321,59 +321,51 @@
       
 
       
-        <h1 id="关于CSS浮动的理解"><a href="#关于CSS浮动的理解" class="headerlink" title="关于CSS浮动的理解"></a>关于CSS浮动的理解</h1><h2 id="什么是“浮动”"><a href="#什么是“浮动”" class="headerlink" title="什么是“浮动”"></a>什么是“浮动”</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>浮动是指的是CSS的属性float。对于设置了浮动的元素，在页面效果上可以通俗的理解为“这个元素漂起来了（在水上）”，位置发生变化，不按HTML代码中排列。从定义上理解，即该元素脱离了文档流（常规流）。</p>
+        <h1 id="消除CSS浮动带来的影响"><a href="#消除CSS浮动带来的影响" class="headerlink" title="消除CSS浮动带来的影响"></a>消除CSS浮动带来的影响</h1><p>当我们在进行页面布局的过程里，使用了<code>float</code>属性后。由于浮动元素的特性，就会给布局带来影响。这里就简单总结以下，如何消除浮动所带来的影响。</p>
 <a id="more"></a>
-<p>以下是MDN web docs中关于浮动的描述：</p>
-<blockquote>
-<p>float CSS属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动中移除，尽管仍然保持部分的流动性（与绝对定位相反）。</p>
-</blockquote>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>从两张图片简单的看以下浮动的效果：</p>
-<ol>
-<li><p>a在容器中是块级元素，占据一整行的位置（父级的全部宽度），后续的文字排列在其下方。<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsqr703wj20eg0763zi.jpg" alt=""></p>
-</li>
-<li><p>给a添加上<code>float: left;</code>，后续的文字紧跟a排列。<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbsrzk3klj20eh05at9r.jpg" alt=""></p>
-</li>
-</ol>
-<h2 id="浮动对布局的影响"><a href="#浮动对布局的影响" class="headerlink" title="浮动对布局的影响"></a>浮动对布局的影响</h2><p>从上面的图片例子直观的了解了浮动后，我们来仔细看看，浮动对于布局的影响。</p>
-<h3 id="浮动元素对兄弟元素的影响："><a href="#浮动元素对兄弟元素的影响：" class="headerlink" title="浮动元素对兄弟元素的影响："></a>浮动元素对兄弟元素的影响：</h3><ol>
-<li><p>当兄弟元素是块级元素，浮动元素不会影响其布局。<br>块a浮动后，块b仍然占据一整行。视觉上，即块a浮到了块b的上一层。<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtw0afu2j20ek06cwei.jpg" alt=""></p>
-</li>
-<li><p>当兄弟元素是行内元素，它的布局会收到浮动元素的影响。<br>将“float CSS”放在span标签中，发现其位置和后续的文本一样，被浮动的块a“顶开了”。<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtzxf9mlj20ed04ymy4.jpg" alt=""></p>
-</li>
-</ol>
-<h3 id="浮动元素对父级元素的影响"><a href="#浮动元素对父级元素的影响" class="headerlink" title="浮动元素对父级元素的影响"></a>浮动元素对父级元素的影响</h3><ol>
-<li><p>当父级元素是行内元素，浮动效果如下：<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbuf3ya66j20e903kwel.jpg" alt=""><br>产生了和兄弟行内元素一样的效果。</p>
-<blockquote>
-<p>所以，在使用浮动的时候，父级元素一般不要使用行内元素，避免造成不必要的麻烦。</p>
-</blockquote>
-</li>
-<li><p>当父级元素是块级元素。我们先看没有浮动的情况：<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbukbfcn8j209c03u3ye.jpg" alt=""><br>对比加了浮动之后，<br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbulajru6j209603mjr9.jpg" alt=""><br>很明显的能发现，浮动元素对于父级最大的影响在于，不能“撑开”父级元素。</p>
-</li>
-</ol>
-<h3 id="浮动元素之间的影响"><a href="#浮动元素之间的影响" class="headerlink" title="浮动元素之间的影响"></a>浮动元素之间的影响</h3><p>对于多个浮动元素（浮动方向一致），在布局上就是单纯的按照元素在HTML代码中的顺序依次摆放。这里要说的是，在摆放中的一些规则。</p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoda5fusj20ae09rta8.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncoe40dpwj20a409i0ub.jpg" alt=""><br>块a、b和c同为向左浮动的元素，它们横向依次排列。当我们尝试增加块c的宽度到超过父级的限制时，块c就挪到了块a、b的下方。可以简单的理解为，a、b所在的“第一行”已经放不下c了，所以把c靠着左边（浮动方向）放到“下一行”。可以把这个规则略微粗暴的归纳为：<strong>换行</strong>。</p>
-<blockquote>
-<p>这里讲的“行”的概念并不是真正指一整行的空间，是个抽象概念。</p>
-</blockquote>
-<p>另一种情况，我们不增加c的宽度，而是在块c之后加上块d。</p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncooemh1dj20a80agq4h.jpg" alt=""></p>
-<p>这就会很奇怪，根据上面的归纳，块d不该放到“下一行”吗？</p>
-<p>所以，另一条规则就是：<strong>上移</strong>。但是，仅仅是单纯的上移是不准确的，我们看下面的情况：</p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpk34azbj20aa0azabq.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncpjlyl3uj20a30byabp.jpg" alt=""></p>
-<p>可以看到，虽然块a下方仍有控件，但是块d不会上移去填补这部分空白，并且，块d始终是处于块c的下方的，即块d的顶部始终不超过块c的底边。<br>对于上移规则的限制，可以说<strong>不超过前一个浮动元素</strong></p>
-<p>综上，浮动元素的摆放规则可总结为：</p>
+<h2 id="消除兄弟浮动元素的影响"><a href="#消除兄弟浮动元素的影响" class="headerlink" title="消除兄弟浮动元素的影响"></a>消除兄弟浮动元素的影响</h2><p>如图，块b的兄弟元素块a是一个左浮动的元素。</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fnbtw0afu2j20ek06cwei.jpg" alt=""></p>
+<p>要消除这个浮动元素块a带来的影响，可以使用CSS的<code>clear</code>属性。准确来说，把消除这种影响叫做，<strong>清除浮动</strong>。</p>
+<h3 id="clear属性介绍"><a href="#clear属性介绍" class="headerlink" title="clear属性介绍"></a>clear属性介绍</h3><p>clear属性的直观作用，可以说是将元素下移直到没有浮动元素。其有以下4个值可设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">clear: none | left | right | both ;</div></pre></td></tr></table></figure></p>
+<p>none：默认值，即不清除；<br>left：清除左浮动（从右往左看，看到的浮动元素）；<br>right：清除右浮动（从左往右看，看到的浮动元素）；<br>both：同时清除左右两边的浮动。</p>
+<h3 id="清除浮动的效果"><a href="#清除浮动的效果" class="headerlink" title="清除浮动的效果"></a>清除浮动的效果</h3><p>给上述例子的块b元素，加上了<code>clear: left;</code>后。它移动到了块a的下方。</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fowb6bg2g3j20er097jrn.jpg" alt=""></p>
 <ul>
-<li>水平方向上，靠左（根据浮动方向）依次摆放</li>
-<li>摆不下，摆下一行</li>
-<li>换行后，尽量上移，但不能超过前一个浮动元素的底边</li>
+<li>right和both同理，不做赘述，可以自己动手实验。</li>
 </ul>
-<h2 id="浮动的运用"><a href="#浮动的运用" class="headerlink" title="浮动的运用"></a>浮动的运用</h2><p>用浮动来实现布局，比如，商品的展示页面，</p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncq91opqej20xd0j2whz.jpg" alt=""></p>
-<p>侧导航栏等等。</p>
-<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fncqdxt1o4j20zx0catao.jpg" alt=""></p>
-<p>总的来说，浮动的使用是为了改变元素的位置（其实更贴切来说应该是顺序），使其按照我们所想的摆放在页面上，因此浮动广泛用于页面的布局之上。在CSS新加入Flex（弹性）布局之后，由于便于操作，在实现布局上会选择Flex来实现，但浮动运用依旧广泛。具体就要看我们在开发过程中的需求和自己的选择了。</p>
-<h2 id="再讲两句"><a href="#再讲两句" class="headerlink" title="再讲两句"></a>再讲两句</h2><p>在梳理这些知识之前，虽说知道了浮动是怎么回事，但始终没有把它统一的归纳起来，自己捋一遍，才发觉其中确实有一些值得好好推敲的细节。能力和经验有限，理解不一定能准确到位，在网上看了相关的资料和视频后，决定写下这篇文章，看看自己是不是真的理解了这个东西。<br>关于浮动，后续会总结以下消除浮动影响的相关内容。</p>
+<h2 id="消除子浮动元素的影响"><a href="#消除子浮动元素的影响" class="headerlink" title="消除子浮动元素的影响"></a>消除子浮动元素的影响</h2><p>当子元素设置了浮动时，其将不再影响父级元素的高度。如图，由于所有子元素浮动，父级（有蓝色边框）的高度为0。</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fowbeuv0i7j20ml094wet.jpg" alt=""></p>
+<p>要消除这种影响，简单来说，就是要使浮动元素能够“撑开”它的父级。把消除这种影响叫做，<strong>闭合浮动</strong>。</p>
+<h3 id="闭合浮动的方法"><a href="#闭合浮动的方法" class="headerlink" title="闭合浮动的方法"></a>闭合浮动的方法</h3><h4 id="1-使用伪元素"><a href="#1-使用伪元素" class="headerlink" title="1. 使用伪元素"></a>1. 使用伪元素</h4><p>给父级元素加上伪元素<code>::after</code>，让其起到“撑开”的作用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div::after &#123;</div><div class="line">    content: &apos;&apos;;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>相当于在父级元素的末尾放置一个块级元素，并让它清除左右浮动，如此以来，它就会下移到所有浮动元素下方，以此来“撑开”父级。</p>
+<h4 id="2-利用BFC"><a href="#2-利用BFC" class="headerlink" title="2. 利用BFC"></a>2. 利用BFC</h4><blockquote>
+<p>BFC（Block Formatting Context,块格式化上下文）,是Web页面的可视化CSS渲染的部分，是块级盒布局发生的区域，也是浮动元素与其他元素交互的区域。</p>
+</blockquote>
+<p>简单来说，我们可以将父级元素创建成为BFC，即可以实现让其内的浮动元素将它“撑开”的效果。具体方法有：</p>
+<blockquote>
+<ul>
+<li>浮动元素 (元素的 float 不是 none)</li>
+<li>绝对定位元素 (元素的 position 为 absolute 或 fixed)</li>
+<li>overflow 值不为 visible 的块元素</li>
+<li>内联块元素 (元素具有 display: inline-block)</li>
+</ul>
+</blockquote>
+<p>以上的列举只是部分常用，更多的方法和更详尽的描述可以参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="external">MDN web docs</a>。</p>
+<h3 id="闭合浮动的效果"><a href="#闭合浮动的效果" class="headerlink" title="闭合浮动的效果"></a>闭合浮动的效果</h3><p>进行了闭合浮动的操作后，结果就是：</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1foweq15i3oj20my090gm1.jpg" alt=""></p>
+<ul>
+<li>关于BFC的具体理解现在自己也有些模糊，暂且先挖一小坑，后续填上。</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>在写清除浮动的demo的时候，发现一个平时比较容易忽略的细节。</p>
+<p>现有a，b和c三个<code>div</code>,分别设置为左浮动，不浮动，右浮动。预想中的结果应该是：</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fowibb0k43j20el06ajrl.jpg" alt=""></p>
+<p>但实际情况出现了这样的：</p>
+<p><img src="https://ws1.sinaimg.cn/large/82d73c4bgy1fowifg72ohj20ee091jrm.jpg" alt=""></p>
+<p>c居然跑到外面去了，这就很尴尬了……说好的浮动以后脱离常规流呢？</p>
+<p>一开始以为是CSS代码出问题，最后发现关键是在HTML代码里，是一个很容易被忽略的细节，元素的<strong>HTML代码顺序</strong>。</p>
+<p>出错的顺序是：a、b、c。<br><br>正确的顺序是：a、c、b。</p>
+<p>个人分析：b放在c之前，浏览器先渲染出了b，但由于b不是浮动元素，先占据了父级元素的空间，跟在其后的c并不能被“撑开”父级，所以只能跟在其后面。</p>
+<p>所以，运用到浮动的时候，要注意：<strong>浮动元素要编写在HTML的最前面</strong>。</p>
 
       
     </div>
@@ -406,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/09/change-hexo-theme/" rel="next" title="博客主题更换（github + hexo）">
-                <i class="fa fa-chevron-left"></i> 博客主题更换（github + hexo）
+              <a href="/2018/01/11/css-float/" rel="next" title="关于css浮动的理解">
+                <i class="fa fa-chevron-left"></i> 关于css浮动的理解
               </a>
             
           </div>
@@ -415,10 +407,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/28/css-float-2/" rel="prev" title="消除CSS浮动带来的影响">
-                消除CSS浮动带来的影响 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -561,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于CSS浮动的理解"><span class="nav-number">1.</span> <span class="nav-text">关于CSS浮动的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是“浮动”"><span class="nav-number">1.1.</span> <span class="nav-text">什么是“浮动”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">1.1.2.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动对布局的影响"><span class="nav-number">1.2.</span> <span class="nav-text">浮动对布局的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动元素对兄弟元素的影响："><span class="nav-number">1.2.1.</span> <span class="nav-text">浮动元素对兄弟元素的影响：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动元素对父级元素的影响"><span class="nav-number">1.2.2.</span> <span class="nav-text">浮动元素对父级元素的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动元素之间的影响"><span class="nav-number">1.2.3.</span> <span class="nav-text">浮动元素之间的影响</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动的运用"><span class="nav-number">1.3.</span> <span class="nav-text">浮动的运用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再讲两句"><span class="nav-number">1.4.</span> <span class="nav-text">再讲两句</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#消除CSS浮动带来的影响"><span class="nav-number">1.</span> <span class="nav-text">消除CSS浮动带来的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#消除兄弟浮动元素的影响"><span class="nav-number">1.1.</span> <span class="nav-text">消除兄弟浮动元素的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clear属性介绍"><span class="nav-number">1.1.1.</span> <span class="nav-text">clear属性介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动的效果"><span class="nav-number">1.1.2.</span> <span class="nav-text">清除浮动的效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消除子浮动元素的影响"><span class="nav-number">1.2.</span> <span class="nav-text">消除子浮动元素的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#闭合浮动的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">闭合浮动的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用伪元素"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">1. 使用伪元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-利用BFC"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2. 利用BFC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭合浮动的效果"><span class="nav-number">1.2.2.</span> <span class="nav-text">闭合浮动的效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">1.3.</span> <span class="nav-text">补充</span></a></li></ol></li></ol></div>
             
 
           </div>
